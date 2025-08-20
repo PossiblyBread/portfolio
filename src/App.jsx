@@ -7,18 +7,21 @@ import imageTeto from './assets/pearto.jpg';
 import imageCirno from './assets/cirno.jpg';
 
 function App() {
-  return (
-    <body>
-      <Header />
-      <div className="site-container">
-        <Card src={imageCirno} Name="Cirno" Text="Less go." />
-        <Card src={imageTeto} Name="Adrian Adona" Text="Beese Churger." />
-        <Card Name="Bread" Text="Womper." />
-         
-      </div>
-      <Footer />
-    </body>
-  );
+    return (
+        <site>
+            <head  className="site-container">
+                <Header />
+            </head>
+            <body>
+                <Card src={imageCirno} Name="Cirno" Text="Less go." />
+                <Card src={imageTeto} Name="Adrian Adona" Text="Beese Churger." />
+                <Card Name="Bread" Text="Womper." />
+            </body>
+            <footer>
+                <Footer />
+            </footer>
+        </site>
+    );
 }
 
 export default App
