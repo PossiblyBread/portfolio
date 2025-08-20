@@ -13,6 +13,8 @@ function App() {
       <div className="site-container">
         <Card src={imageCirno} Name="Cirno" Text="Less go." />
         <Card src={imageTeto} Name="Adrian Adona" Text="Beese Churger." />
+        <Card Name="Bread" Text="Womper." />
+         
       </div>
       <Footer />
     </body>
