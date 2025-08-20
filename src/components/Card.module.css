@@ -7,10 +7,22 @@
   text-align: center;
   padding: 30px;
   display: inline-block;
+  margin: 10px;
 }
-.card-image {
-  max-width: 95%;
-  height: auto;
+.card h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: var(--gray-color);
+}
+.card p {
+  font-size: 1rem;
+  color: var(--gray-color);
+  margin: 10px 0;
+}
+.card img {
+  aspect-ratio: 1 / 1;  /* width:height */
+  width: 95%;           /* defines the width */
   border-radius: 20px;
   border: 1px solid var(--gray-color);
+  object-fit: cover;    /* crop if the image doesn’t match */
 }

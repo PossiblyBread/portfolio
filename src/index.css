@@ -14,12 +14,12 @@ body {
   font-family: Arial, sans-serif;
   background-color: var(--light-gray-color);
   min-height: 100%;
-  margin-left: 10px;
-  margin-right: 10px;
 }
-.site-container {
+.main-content {
   min-height: 85dvh;
   padding-bottom: auto;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .header-nav {
   background-color: var(--white-color);
@@ -48,7 +48,10 @@ body {
   padding: 15px;
   display: block;
   text-align: center;
-  color: var(--white-color);
+  color: var(--gray-color);
+}
+.header-nav a:hover {
+  color: var(--teal-color);
 }
 .footer {
   background-color: var(--white-color);
@@ -57,20 +60,4 @@ body {
   text-align: center;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-}
-.card {
-  color: var(--gray-color);
-  background-color: var(--white-color);
-  border: 1px solid var(--gray-color);
-  border-radius: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 30px;
-  display: inline-block;
-}
-.card-image {
-  max-width: 95%;
-  height: auto;
-  border-radius: 20px;
-  border: 1px solid var(--gray-color);
 }
