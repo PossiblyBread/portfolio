@@ -1,9 +1,8 @@
 .card {
   color: var(--gray-color);
   background-color: var(--white-color);
-  border: 1px solid var(--gray-color);
   border-radius: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-soft);
   text-align: center;
   padding: 15px;
   display: inline-block;
@@ -32,10 +31,10 @@
   width: 250px;
 }
 .large {
-  width: calc(100% - 50px);
+  width: 500px;
 }
 .full {
-  width: 90%;
+  width: 95%;
 }
 .profile {
   width: 250px;

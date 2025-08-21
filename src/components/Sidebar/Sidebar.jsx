@@ -4,14 +4,10 @@ function Sidebar({children }) {
   return (
     <aside className={styles.sidebar}>
         {children}
-        <nav>
-          <h2>Sidebar</h2>
-            <ul >
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-            </ul>
-        </nav>
+        <section>
+          <h2>Info</h2>
+          <p>Some basic info about the sidebar or user.</p>
+      </section>
     </aside>
   );
 }

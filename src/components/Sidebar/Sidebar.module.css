@@ -8,26 +8,12 @@
   left: 0;
   overflow-y: auto;
 }
-.sidebar nav h2 {
+.sidebar section h2 {
   margin-bottom: 20px;
   padding-left: 15px;
   font-size: 1.2rem;
   color: var(--gray-color);
 }
-.sidebar nav ul {
-  list-style: none;
-  padding-left: 30px;
-  margin: 0;
-}
-.sidebar nav li {
-  margin: 15px 0;
-}
-.sidebar nav a {
-  text-decoration: none;
-  color: var(--gray-color);
-  font-weight: 500;
-  transition: color 0.2s;
-}
-.sidebar nav a:hover {
-  color: var(--indigo-color);
+.sidebar section p {
+  padding: 15px;
 }
