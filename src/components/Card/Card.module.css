@@ -7,7 +7,7 @@
   text-align: center;
   padding: 15px;
   display: inline-block;
-  margin: 10px 5px 5px 10px;
+  margin: 10px 0 5px 10px;
 }
 .card h2 {
   font-size: 1.5rem;
@@ -36,4 +36,10 @@
 }
 .full {
   width: 90%;
+}
+.profile {
+  width: 250px;
+}
+.profile img {
+  border-radius: 50%;
 }
