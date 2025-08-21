@@ -1,6 +1,8 @@
+import styles from "./Header.module.css";
+
 function Header() {
   return (
-    <header className="header-nav">
+    <header className={styles.headerNav}>
       <h1>Home</h1>
       <nav>
         <ul>
