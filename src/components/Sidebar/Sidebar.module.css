@@ -8,12 +8,13 @@
   left: 0;
   overflow-y: auto;
 }
-.sidebar section h2 {
-  margin-bottom: 20px;
+.sidebar .Title {
+  padding-top: 10px;
   padding-left: 15px;
   font-size: 1.2rem;
   color: var(--gray-color);
 }
-.sidebar section p {
-  padding: 15px;
+.sidebar .Desc {
+  color: var(--gray-color);
+  padding-left: 15px;
 }

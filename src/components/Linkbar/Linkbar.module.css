@@ -1,0 +1,29 @@
+.linkbar {
+    color: var(--gray-color);
+    background-color: var(--white-color);
+    border-radius: 15px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    padding: 5px;
+    margin: 10px 0 5px 10px;
+    display: flex;
+    width: 90%;
+}
+.linkbar span {
+    padding-top: 15px;
+    margin-left: 10px;
+}
+.linkbar .icon {
+    max-width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+.openIcon {
+  width: 24px;
+  height: 24px;
+  margin-left: auto; /* push to the right side */
+}
+.linkbar:hover {
+    transition: ease-in 0.2s;
+    background-color: var(--light-gray-color);  
+}

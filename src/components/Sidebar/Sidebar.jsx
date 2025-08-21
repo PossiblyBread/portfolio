@@ -1,14 +1,15 @@
 import styles from "./Sidebar.module.css";
 
-function Sidebar({children }) {
+function Sidebar({title, desc, children}) {
   return (
     <aside className={styles.sidebar}>
-        {children}
+      {children}
         <section>
-          <h2>Info</h2>
-          <p>Some basic info about the sidebar or user.</p>
-      </section>
+          <h2 className={styles.Title}>{title}</h2>
+          <p className={styles.Desc}>{desc}</p>
+        </section>
     </aside>
   );
 }
+
 export default Sidebar;

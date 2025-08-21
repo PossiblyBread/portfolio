@@ -2,23 +2,25 @@
   color: var(--gray-color);
   background-color: var(--white-color);
   border-radius: 15px;
-  box-shadow: var(--shadow-soft);
   text-align: center;
   padding: 15px;
   display: inline-block;
   margin: 10px 0 5px 10px;
 }
-.card h2 {
+.shadow {
+  box-shadow: var(--shadow-soft);
+}
+.cardName {
   font-size: 1.5rem;
   margin: 10px 0;
   color: var(--gray-color);
 }
-.card p {
+.cardText {
   font-size: 1rem;
   color: var(--gray-color);
   margin: 10px 0;
 }
-.card img {
+.cardImage {
   aspect-ratio: 1 / 1;  
   width: 95%;        
   max-width: 200px;
@@ -27,18 +29,18 @@
   border: 1px solid var(--gray-color);
   object-fit: cover;    
 }
-.small {
+.smallCard {
   width: 250px;
 }
-.large {
+.largeCard {
   width: 500px;
 }
-.full {
+.fullCard {
   width: 95%;
 }
-.profile {
+.profileCard {
   width: 250px;
 }
-.profile img {
+.profileCard .cardImage {
   border-radius: 50%;
 }
