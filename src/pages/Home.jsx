@@ -10,7 +10,7 @@ function Home() {
       <Sidebar>
         <Card src={imageCirno} Name="Cirno" Text="Small Card" variant="profile"/>
       </Sidebar>
-      <div className="main-content">
+      <div>
         <Card variant="large">
           <h2>Card Inside Card Example</h2>
           <Card src={imageCirno} Name="Cirno" Text="Small Card" />
