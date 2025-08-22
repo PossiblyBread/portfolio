@@ -3,6 +3,7 @@ import Linkbar from "../components/Linkbar/Linkbar.jsx";
 import Card from "../components/Card/Card.jsx";
 import CardFlip from "../components/Card/CardFlip.jsx";
 import Container from "../components/Container/Container.jsx";
+import DarkModeSwitch from "../components/Switch/darkmodeswitch/DarkModeSwitch";
 
 import githubIcon from '../assets/icons/github.svg';
 import gmailIcon from '../assets/icons/gmail.svg';
@@ -26,6 +27,7 @@ function Home() {
 
 			<div>
 				<Container>
+					<DarkModeSwitch />
 					<h2>Overview</h2>
 					<Card src={imageTeto} Name="Adrian" Text="Small Card" variant="smallCard" shadow/>
 				</Container>

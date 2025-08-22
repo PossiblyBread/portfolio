@@ -24,17 +24,28 @@ small {
   font-size: 0.875rem;
 }
 :root {
-  --gray-color: #353535; /* Text  */
-  --white-color: white; /*  Background */
-  --indigo-color: #284B63; /*  Primary Color */
-  --obsidian-color: #37375D; /*  Alt Primary */
+  --gray-color: #353535; /* Text */
+  --white-color: #ffffff; /* Background */
+  --indigo-color: #284B63; /* Primary Color */
+  --obsidian-color: #37375D; /* Alt Primary */
   --light-gray-color: #D9D9D9; /* Secondary */
   --teal-color: #3c6e71; /* Accent */
   --iris-color: #515270; /* Alt-Accent */
   --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.15);
   --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.2);
   --shadow-strong: 0 8px 20px rgba(0, 0, 0, 0.25);
-  
+}
+.dark-mode {
+  --gray-color: #E0E0E0; /* Lighter text for contrast */
+  --white-color: #1e1e24; /* Softer near-black background */
+  --indigo-color: #3d6b8a; /* Slightly brighter primary */
+  --obsidian-color: #2f2f55; /* Darker alt primary */
+  --light-gray-color: #44475a; /* Muted secondary */
+  --teal-color: #3c8c8e; /* Pop accent */
+  --iris-color: #7b7db3; /* Softer alt-accent */
+  --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-strong: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 body {
   margin: 0 0 0 310px;
