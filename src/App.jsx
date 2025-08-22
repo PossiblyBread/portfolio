@@ -6,7 +6,7 @@ import About from "./pages/About.jsx";
 // bruh 2
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Portfolio/">
       <Header />
       <main className="main-content">
         <Routes>
