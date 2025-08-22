@@ -14,7 +14,7 @@
   transform: rotateY(180deg);
 }
 .flip-card-front {
-  background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%, rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+  background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%, rgb(255, 211, 195) 40%, var(--highlight-color) 48%);
   padding: 20px;
   border-radius: 10px;
   box-shadow: var(--shadow-medium);
@@ -42,20 +42,20 @@
 
 .flip-card .imageFront {
     aspect-ratio: 1 / 1;  
-    width: 70%;        
-    max-width: 150px;
+    width: 100%;        
+    max-width: 200px;
     height: auto;
     border-radius: 20px;
-    border: 1px solid var(--gray-color);
+    border: 1px solid var(--muted-color);
     object-fit: cover;    
 }
 .flip-card .imageBack {
     aspect-ratio: 1 / 1;  
-    width: 70%;        
-    max-width: 150px;
+    width: 100%;        
+    max-width: 200px;
     height: auto;
     border-radius: 20px;
-    border: 1px solid var(--gray-color);
+    border: 1px solid var(--muted-color);
     object-fit: cover;    
 }
 .circleImage {

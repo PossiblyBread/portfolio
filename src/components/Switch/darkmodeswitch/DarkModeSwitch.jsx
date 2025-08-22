@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import styles from "../Switch.module.css";
 
 function DarkModeSwitch() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("darkMode") === "true";
+  });
 
   useEffect(() => {
     if (darkMode) {
@@ -10,6 +12,7 @@ function DarkModeSwitch() {
     } else {
       document.documentElement.classList.remove("dark-mode");
     }
+    localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
 
   return (

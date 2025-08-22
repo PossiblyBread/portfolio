@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import styles from "./Header.module.css";
+import DarkModeSwitch from "../../components/Switch/darkmodeswitch/DarkModeSwitch";
 
 function Header() {
   const location = useLocation();
@@ -20,6 +21,7 @@ function Header() {
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
+				  <li><DarkModeSwitch /></li>
         </ul>
       </nav>
     </header>

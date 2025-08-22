@@ -1,7 +1,7 @@
 .sidebar {
   width: 300px;
   height: 100vh; 
-  background-color: var(--white-color);
+  background-color: var(--background-color);
   padding: 5px;
   position: fixed;
   top: 0;

@@ -1,6 +1,6 @@
 .linkbar {
-    color: var(--gray-color);
-    background-color: var(--white-color);
+    color: var(--text-color);                 
+    background-color: var(--background-color); /* Keep neutral so it blends */
     border-radius: 15px;
     box-shadow: var(--shadow-soft);
     text-align: center;
@@ -9,21 +9,26 @@
     display: flex;
     width: 90%;
 }
+
 .linkbar span {
     padding-top: 10px;
     margin-left: 10px;
 }
+
 .linkbar .icon {
     max-width: 40px;
     height: 40px;
     border-radius: 10px;
 }
+
 .openIcon {
-  width: 24px;
-  height: 24px;
-  margin-left: auto; /* push to the right side */
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
 }
+
 .linkbar:hover {
     transition: ease-in 0.2s;
-    background-color: var(--light-gray-color);  
+    background-color: var(--primary-color);  /* Stronger hover */
+    color: var(--background-color);          /* Flip for contrast */
 }
