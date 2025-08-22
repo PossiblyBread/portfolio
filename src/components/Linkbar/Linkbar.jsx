@@ -1,5 +1,5 @@
 import styles from "./Linkbar.module.css";
-import openInNew from "./openInNew.svg";
+import openInNew from "../../assets/icons/openInNew.svg";
 
 function Linkbar({ src, label, href }) {
   if (href) {

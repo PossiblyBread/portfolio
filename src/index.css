@@ -1,6 +1,27 @@
 html, body {
   height: 100%;
   margin: 0;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+p, li, span {
+  font-size: 1rem;
+}
+small {
+  font-size: 0.875rem;
 }
 :root {
   --gray-color: #353535; /* Text  */

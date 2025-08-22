@@ -1,6 +1,8 @@
 import Sidebar from "../components/Sidebar/Sidebar.jsx";
 import Linkbar from "../components/Linkbar/Linkbar.jsx";
 import Card from "../components/Card/Card.jsx";
+import CardFlip from "../components/Card/CardFlip.jsx";
+import Container from "../components/Container/Container.jsx";
 
 import githubIcon from '../assets/icons/github.svg';
 import gmailIcon from '../assets/icons/gmail.svg';
@@ -13,7 +15,8 @@ function Home() {
 	return (
 		<>
 			<Sidebar>
-				<Card src={imageCirno} Name="Adrian Adona" Text="Web Developer" variant="profileCard" shadow />
+				<CardFlip imageFront={imageCirno} frontTitle="Adrian Adona" frontText="Web Developer" imageShapeFront="roundedImage" 
+							imageBack={imageTeto} backTitle="" backText="Wanker" imageShapeBack="roundedImage" />
 				<Card Name="Info" Text="Welcome to my portfolio!" variant="smallCard" />
 				<Linkbar src={githubIcon} label="GitHub" href="https://github.com/PossiblyBread" />
 				<Linkbar src={linkedinIcon} label="LinkedIn" href="https://www.linkedin.com/in/adrian-adona-9077ab331/" />
@@ -22,11 +25,10 @@ function Home() {
 			</Sidebar>
 
 			<div>
-				<Card variant="large" shadow>
+				<Container>
 					<h2>Overview</h2>
-					<Card src={imageCirno} Name="Cirno" Text="Small Card" shadow />
-				</Card>
-				<Card src={imageTeto} Name="Adrian" Text="Small Card" variant="smallCard" shadow/>
+					<Card src={imageTeto} Name="Adrian" Text="Small Card" variant="smallCard" shadow/>
+				</Container>
 				<Card src={imageTeto} Name="Adrian" Text="Large Card" variant="largeCard" shadow/>
 				<Card src={imageCirno} Name="Cirno Again" Text="Full Width Card" variant="fullCard" shadow/>
 			</div>
