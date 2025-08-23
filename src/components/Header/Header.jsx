@@ -1,10 +1,10 @@
-import { useLocation, Link } from "react-router-dom"; // ✅ Import Link
+import { useLocation, Link } from "react-router-dom"; 
 import styles from "./Header.module.css";
 import DarkModeSwitch from "../../components/Switch/darkmodeswitch/DarkModeSwitch";
 
 function Header() {
   const location = useLocation();
-  
+
   const pageTitles = {
     "/": "Home",
     "/home": "Home",
