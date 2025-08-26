@@ -1,9 +1,12 @@
 .container {
-    background-color: var(--background-color);
-    box-shadow: var(--shadow-soft);
+    background-color: var(--surface-color);
     border-radius: 15px;
-    padding: 10px 0 5px 10px;
-    margin: 10px 10px 5px 10px;
+    padding: 20px;
+    margin: 10px 15px 5px 10px;
+    display: inline-block;
+    background-color: var(--surface-color);
+    border: 1px solid color-mix(in oklab, var(--text-color) 14%, transparent);
+    box-shadow: var(--shadow-soft);
 }
 .container h2 {
     color: var(--text-color);

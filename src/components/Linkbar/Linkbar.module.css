@@ -1,34 +1,32 @@
 .linkbar {
     color: var(--text-color);                 
-    background-color: var(--background-color); /* Keep neutral so it blends */
+    background-color: var(--surface-color); /* Keep neutral so it blends */
     border-radius: 15px;
-    box-shadow: var(--shadow-soft);
     text-align: center;
     padding: 5px;
     margin: 10px 0 5px 10px;
     display: flex;
     width: 90%;
+    text-decoration: none;
+    border: 1px solid color-mix(in oklab, var(--text-color) 14%, transparent);
 }
-
 .linkbar span {
     padding-top: 10px;
     margin-left: 10px;
 }
-
 .linkbar .icon {
+    background-color: white;
     max-width: 40px;
     height: 40px;
     border-radius: 10px;
 }
-
 .openIcon {
     width: 24px;
     height: 24px;
     margin-left: auto;
 }
-
 .linkbar:hover {
     transition: ease-in 0.2s;
-    background-color: var(--primary-color);  /* Stronger hover */
+    background-color: var(--muted-color);  /* Stronger hover */
     color: var(--background-color);          /* Flip for contrast */
 }

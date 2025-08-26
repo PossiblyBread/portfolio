@@ -6,8 +6,10 @@ import About from "./pages/About.jsx";
 
 function App() {
   return (
-    <Router basename="/portfolio">
-      <Header />
+    <Router basename="/portfolio/">
+      <div>
+        <Header className="glassy-fx"/>
+      </div>
       <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />

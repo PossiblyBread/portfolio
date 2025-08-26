@@ -8,24 +8,29 @@ html, body {
 h1 {
   font-size: 2rem;
   font-weight: bold;
+  color: var(--text-color);
 }
 h2 {
   font-size: 1.5rem;
   font-weight: bold;
+  color: var(--text-color);
 }
 h3 {
   font-size: 1.25rem;
   font-weight: bold;
+  color: var(--text-color);
 }
 p, li, span {
   font-size: 1rem;
+  color: var(--text-color);
 }
 small {
   font-size: 0.875rem;
 }
 :root {
   --text-color: #2c2c2c;          
-  --background-color: #ffffff;      
+  --background-color: #f6f7fb;      
+  --surface-color: #ffffff;       
   --primary-color: #3f51b5;         
   --secondary-color: #607d8b;       
   --muted-color: #6B7280;           
@@ -36,18 +41,18 @@ small {
   --shadow-strong: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 .dark-mode {
-  --text-color: #e0e0e0;            
-  --background-color: #1e1e2f;      
-  --primary-color: #7986cb;         
+  --text-color: #e7ecf3;            
+  --background-color: #0b0d10;      
+  --surface-color: #111418;       
+  --primary-color: #6ea8fe;         
   --secondary-color: #455a64;       
-  --muted-color: #aeb0b0;           
-  --success-color: #66bb6a;         
+  --muted-color: #a7b0be;           
+  --success-color: #8ce99a;         
   --highlight-color: #ffb74d;     
-  --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.25);
-  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --shadow-strong: 0 8px 20px rgba(0, 0, 0, 0.35);
+  --shadow-soft: 0 2px 6px rgba(110,168,254, 0.1);
+  --shadow-medium: 0 4px 12px rgba(110,168,254, 0.15);
+  --shadow-strong: 0 8px 20px rgba(110,168,254, .25);
 }
-
 body {
   margin: 0 0 0 310px;
   font-family: Arial, sans-serif;
@@ -58,4 +63,33 @@ body {
   min-height: 85dvh;
   padding-bottom: auto;
 }
-
+.glassy-fx {
+    background: rgba(255, 255, 255, 0.5) !important; 
+    backdrop-filter: blur(10px); 
+    border-radius: 10px;  
+    transition: all 0.3s ease-in-out; 
+}
+/* scroll effects */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.slide-left, .slide-right {
+    opacity: 0;
+    transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+}
+.slide-left {
+    transform: translateX(-100px);
+}
+.slide-right {
+    transform: translateX(70px);
+}
+.slide-left.show, .slide-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}

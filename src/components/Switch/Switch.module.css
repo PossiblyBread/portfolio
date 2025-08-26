@@ -4,6 +4,7 @@
   display: inline-block;
   width: 3.5em;
   height: 2em;
+  margin: 10px;
 }
 .switch input {
   opacity: 0;
