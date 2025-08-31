@@ -10,6 +10,7 @@
   overflow-x: hidden;     
   scrollbar-width: none;      /* Firefox */
   -ms-overflow-style: none;   /* IE/Edge */
+  
 }
 .sidebar::-webkit-scrollbar {
   display: none; 

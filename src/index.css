@@ -1,39 +1,10 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-}
-h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--text-color);
-}
-h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--text-color);
-}
-h3 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: var(--text-color);
-}
-p, li, span {
-  font-size: 1rem;
-  color: var(--text-color);
-}
-small {
-  font-size: 0.875rem;
-}
 :root {
-  --text-color: #2c2c2c;          
+  --text-color: #2c2c2c;             
   --background-color: #f6f7fb;      
   --surface-color: #ffffff;       
   --primary-color: #3f51b5;         
   --secondary-color: #607d8b;       
-  --muted-color: #6B7280;           
+  --muted-color: #bbbbbb;           
   --success-color: #4caf50;        
   --highlight-color: #ff9800;     
   --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -46,28 +17,97 @@ small {
   --surface-color: #111418;       
   --primary-color: #6ea8fe;         
   --secondary-color: #455a64;       
-  --muted-color: #a7b0be;           
+  --muted-color: #8f8f8f;           
   --success-color: #8ce99a;         
   --highlight-color: #ffb74d;     
   --shadow-soft: 0 2px 6px rgba(110,168,254, 0.1);
   --shadow-medium: 0 4px 12px rgba(110,168,254, 0.15);
   --shadow-strong: 0 8px 20px rgba(110,168,254, .25);
 }
-body {
-  margin: 0 0 0 310px;
-  font-family: Arial, sans-serif;
+html, body {
+  height: 100%;
+  font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: clamp(1rem, 0.95rem + 0.5vw, 1.125rem); 
   background-color: var(--background-color);
-  min-height: 100%;
+  margin: 0;
+  color: var(--text-color);
+}
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+label {
+  font-weight: 600;
+}
+p {
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+}
+textarea, input, button {
+  font-size: 18px;
+}
+small {
+  font-size: 0.875rem;
+}
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 0.5;
+}
+.profile h1 {
+  font-size: 40px;
+  font-weight: bolder;
+  color: var(--primary-color) !important;
+}
+.profile h3 {
+  color: var(--secondary-color) !important;
+}
+.profile-image {
+  width: 50px;
+  height: auto;
+  min-width: 250px;
+  max-width: 300px;
+  border-radius: 50%;
+  border: 2px solid var(--muted-color);
 }
 .main-content {
+  margin: 0 0 0 310px;
   min-height: 85dvh;
   padding-bottom: auto;
 }
 .glassy-fx {
-    background: rgba(255, 255, 255, 0.5) !important; 
     backdrop-filter: blur(10px); 
-    border-radius: 10px;  
     transition: all 0.3s ease-in-out; 
+}
+.backdrop {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+}
+.hero {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centered {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 /* scroll effects */
 .fade-in {
@@ -92,4 +132,118 @@ body {
 .slide-left.show, .slide-right.show {
     opacity: 1;
     transform: translateX(0);
+}
+/* Container */
+.container {
+  background-color: var(--surface-color);
+  border-radius: 15px;
+  padding: 30px 20px 20px 20px;
+  margin: 10px 15px;
+  border: 1px solid color-mix(in oklab, var(--text-color) 14%, transparent);
+  box-shadow: var(--shadow-soft);
+  display: flex;              
+  flex-wrap: wrap;           
+  justify-content: center;   
+  align-items: flex-start;    
+  gap: 20px;                 
+}
+.container h2 {
+    color: var(--text-color);
+    margin-top: 0;
+}
+/* Form */
+.form-container h1 {
+  text-align: center;
+  color: var(--primary-color);
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 25px auto;
+  padding: 20px;
+  background-color: var(--surface-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-medium);
+  color: var(--text-color);
+  min-width: 300px;
+  max-width: 700px;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+}
+.contact-form input,
+.contact-form textarea {
+  margin-top: 0.4rem;
+  padding: 0.7rem;
+  border: 1px solid var(--muted-color);
+  border-radius: 8px;
+  background: var(--background-color);
+  color: var(--text-color);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.25); 
+  outline: none;
+}
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.contact-form button {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.contact-form button:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+}
+.contact-form button:active {
+  transform: translateY(0);
+}
+@media (max-width: 480px) {
+  .container {
+    margin: 5px;
+    padding: 20px 5px 5px 5px;
+    gap: 15px;
+  }
+}
+@media (max-width: 640px) {
+  .card {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    width: 45%;  
+  }
+}
+@media (max-width: 1024px) {
+  .card {
+    width: 30%;   
+  }
+}
+@media (max-width: 1280px) {
+  .card {
+    width: 25%;
+  }
+}
+@media (min-width: 1536px) {
+  .card {
+    width: 20%;  
+  }
 }
