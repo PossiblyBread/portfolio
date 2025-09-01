@@ -42,12 +42,12 @@ function Home() {
 			</div>
 			<div className="centered">
 				<div className="container inlineFLex">
-					<Card src={imageCirno} Name="Ticketing System" Text="A web-based ticketing platform for managing support requests, tracking status, and assigning issues. Built with PHP and MySQL for efficient data handling." variant="smallCard" link="/projects/TicketingSystem" border/>
-					<Card src={imageTeto} Name="Inventory Management System" Text="A system to monitor stock levels, track product movements, and generate reports. Designed to help businesses maintain accurate inventory records." link="/projects/IMS" variant="smallCard" border/>
+					<Card src={imageTeto} Name="Authentication System" Text="An authentication system featuring user registration, login, and email verification. Developed with PHP and MySQL for safe and efficient account management." link="/projects/AuthSystem" variant="smallCard" border/>
 					<Card src={imageCirno} Name="Email Sending System (PHPMailer)" Text="Implemented email sending functionality using PHPMailer and Composer, enabling features like contact forms and account confirmation messages." link="/projects/EmailSender" variant="smallCard" border/>
-					<Card src={imageTeto} Name="Login / Register System With Email Verification" Text="A secure authentication system featuring user registration, login, and email verification. Developed with PHP and MySQL for safe and efficient account management." link="/projects/AuthSystem" variant="smallCard" border/>
+					<Card src={imageTeto} Name="Inventory Management System" Text="A system to monitor stock levels, track product movements, and generate reports. Designed to help businesses maintain accurate inventory records." link="/projects/IMS" variant="smallCard" border/>
 					<Card src={imageCirno} Name="Ledger System" Text="A record-keeping tool for managing financial transactions, tracking account balances, and maintaining a clear history of entries. Built with PHP and MySQL." link="/projects/LedgerSystem" variant="smallCard" border/>
 					<Card src={imageTeto} Name="Payroll System" Text="An automated payroll solution that calculates employee net pay with deductions, manages work hours, and generates organized payslips." link="/projects/PayrollSystem" variant="smallCard" border/>
+					<Card src={imageCirno} Name="Ticketing System" Text="A web-based ticketing platform for managing support requests, tracking status, and assigning issues. Built with PHP and MySQL for efficient data handling." variant="smallCard" link="/projects/TicketingSystem" border/>
 				</div>
 			</div>
 			<div className="form-container">
