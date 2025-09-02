@@ -4,14 +4,15 @@ import LightModeSwitch from "../Switch/darkmodeswitch/DarkModeSwitch";
 import { useState } from "react";
 
 function Header() {
-    const location = useLocation();
-    const [projectsOpen, setProjectsOpen] = useState(false);
+    // const location = useLocation();
 
-    const pageTitles = {
-        "/": "Welcome!",
-        "/about": "Adrian Adona",
-    };
-    const title = pageTitles[location.pathname] || "Page";
+    // const pageTitles = {
+    //     "/": "Welcome!",
+    //     "/about": "Adrian Adona",
+    // };
+    // const title = pageTitles[location.pathname] || "Page";
+    
+    const [projectsOpen, setProjectsOpen] = useState(false);
 
     const toggleProjects = () => setProjectsOpen(!projectsOpen);
 
@@ -22,7 +23,7 @@ function Header() {
             <li>
                 <LightModeSwitch />
             </li>
-            <h3>{title}</h3>
+            {/* <h3>{title}</h3> */}
             <nav>
                 <ul className={styles.navList}>
                     <li>

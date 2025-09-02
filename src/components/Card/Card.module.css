@@ -5,8 +5,9 @@
   display: flex;              
   flex-direction: column;     
   justify-content: space-between;
-  min-width: 200px;
   overflow: hidden; 
+  min-width: 250px;
+  
 }
 .card::before {
   content: "";
@@ -57,13 +58,8 @@
   box-shadow: var(--shadow-medium);
 }
 .smallCard {
-  width: 250px;
-}
-.largeCard {
-  width: 500px;
-}
-.fullCard {
-  width: 95%;
+  max-width: 350px;
+  min-width: 250px;
 }
 .profileCard {
   width: 250px;
@@ -94,21 +90,4 @@
 .cardLink:hover::after {
   right: -5px;   
   opacity: 1;    
-}
-@media (max-width: 480px) {
-  .card {
-    width: 100%;   
-    min-width: unset;
-    margin: 0;
-  }
-}
-@media (max-width: 640px) {
-  .card {
-    width: 90%;
-  }
-}
-@media (max-width: 768px) {
-  .card {
-    width: 45%;  
-  }
 }
