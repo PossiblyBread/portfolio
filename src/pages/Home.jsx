@@ -11,7 +11,7 @@ function Home() {
 	useScrollAnimations();
 	return (
 		<>
-			<div className="profile hero">
+			<div className="profile hero" id="hero">
 				<img src={imageCirno} alt="Profile" className="profile-image circle" />
 				<h1 className="gradient-text">Hello, I'm Adrian</h1>
 				<h3>Full Stack Developer</h3>		
@@ -20,7 +20,7 @@ function Home() {
 					<ButtonV2><a href="#about">Connect with me</a></ButtonV2>
 				</div>
 			</div>
-			<div className="fade-in backdrop">
+			<div className="fade-in backdrop" id="about">
 				<div className="centered">
 					<div className="">
 						<h2>About</h2>
@@ -50,7 +50,7 @@ function Home() {
 					<Card src={imageCirno} Name="Ticketing System" Text="A web-based ticketing platform for managing support requests, tracking status, and assigning issues. Built with PHP and MySQL for efficient data handling." variant="smallCard" link="/projects/TicketingSystem" border/>
 				</div>
 			</div>
-			<div className="form-container">
+			<div className="form-container" id="contact-form">
 				<h1> Contact Me </h1>
 				<div className="contact-form">
 					<form action="https://formspree.io/f/xgvlvgab" method="POST"> 

@@ -14,17 +14,17 @@ import TicketingSystem from "./pages/projects/TicketingSystem";
 function App() {
   return (
     <Router basename="/portfolio/">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/projects/AuthSystem" element={<AuthSystem />} />
-          <Route path="/projects/EmailSender" element={<EmailSender />} />
-          <Route path="/projects/IMS" element={<IMS />} />
-          <Route path="/projects/LedgerSystem" element={<LedgerSystem />} />
-          <Route path="/projects/PayrollSystem" element={<PayrollSystem />} />
-          <Route path="/projects/TicketingSystem" element={<TicketingSystem />} />
-        </Routes>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/projects/AuthSystem" element={<AuthSystem />} />
+        <Route path="/projects/EmailSender" element={<EmailSender />} />
+        <Route path="/projects/IMS" element={<IMS />} />
+        <Route path="/projects/LedgerSystem" element={<LedgerSystem />} />
+        <Route path="/projects/PayrollSystem" element={<PayrollSystem />} />
+        <Route path="/projects/TicketingSystem" element={<TicketingSystem />} />
+      </Routes>
       <Footer />
     </Router>
   );

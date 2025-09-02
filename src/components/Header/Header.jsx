@@ -4,7 +4,6 @@ import LightModeSwitch from "../Switch/darkmodeswitch/DarkModeSwitch";
 import { useState } from "react";
 
 function Header() {
-    // const location = useLocation();
 
     // const pageTitles = {
     //     "/": "Welcome!",
@@ -12,10 +11,9 @@ function Header() {
     // };
     // const title = pageTitles[location.pathname] || "Page";
     
+    const location = useLocation();
     const [projectsOpen, setProjectsOpen] = useState(false);
-
     const toggleProjects = () => setProjectsOpen(!projectsOpen);
-
     const isProjectsActive = location.pathname.startsWith("/projects");
 
     return (
