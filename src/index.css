@@ -225,3 +225,94 @@ justify-content: center;
     gap: 15px;
   }
 } */
+ .profileButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+.buttonRow {
+  display: flex;
+  gap: 1rem;
+}
+.profileButtons a {
+  text-decoration: none;
+  color: inherit;
+}
+.profileButtons button,
+.profileButtons .customButton {
+  padding: 0.75rem 1.6rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  min-width: 150px;
+  text-align: center;
+}
+.profileButtons button {
+  background: var(--primary-color);
+  color: var(--text-color);
+  box-shadow: var(--shadow-medium);
+}
+.profileButtons button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-strong);
+}
+.profileButtons .customButton {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.profileButtons .customButton:hover {
+  background: var(--primary-color);
+  color: var(--text-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+
+}.getStartedLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+.getStartedLink::after {
+  content: "▼"; 
+  font-size: 0.8rem;
+  transition: transform 0.3s ease-in-out;
+}
+.getStartedLink:hover::after {
+  transform: translateY(5px);
+}
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.25s ease, filter 0.25s ease;
+  filter: grayscale(100%) brightness(0.8);
+  border: 1px solid var(--muted-color);
+}
+.icon:hover {
+  transform: scale(1.15);
+  filter: none;
+}
+.githubIcon {
+  filter: invert(1.5) brightness(0.5);
+  background-color: white;
+  border-radius: 50%;
+  padding: 0;
+}
+.linkedinIcon {
+  filter: brightness(0.5);
+  background-color: white;
+  border-radius: 10px;
+  padding: 0;
+}

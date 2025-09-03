@@ -1,7 +1,8 @@
 .footer {
   background-color: var(--background-color);
   color: var(--text-color);
-  padding: 40px 20px 20px; 
+  padding-top: 40px; 
+  padding-bottom: 5px;
   margin-top: 50px;
   box-shadow: var(--shadow-soft);
 }
@@ -44,7 +45,6 @@
   text-align: center;
   margin-top: 20px;
   border-top: 1px solid color-mix(in oklab, var(--text-color) 14%, transparent);
-  padding-top: 10px;
   color: var(--muted-color);
 }
 

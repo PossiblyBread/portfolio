@@ -1,10 +1,9 @@
-import Carousel from "../components/Carousel/carousel.jsx";
-import Button from "../components/Buttons/Button.jsx";
-import ButtonV2 from "../components/Buttons/ButtonV2.jsx";
 import Card from "../components/Card/Card.jsx";
 
 import imageTeto from '../assets/images/pearto.jpg';
 import imageCirno from '../assets/images/cirno.jpg';  
+import githubIcon from '../assets/icons/github.svg';
+import linkedinIcon from '../assets/icons/linkedin.svg';
 
 import useScrollAnimations from "../util/script.js";
 function Home() {
@@ -16,8 +15,23 @@ function Home() {
 				<h1 className="gradient-text">Hello, I'm Adrian</h1>
 				<h3>Full Stack Developer</h3>		
 				<div className="profileButtons">
-					<Button><a href="#projects">Get Started</a></Button>
-					<ButtonV2><a href="#about">Connect with me</a></ButtonV2>
+					<div className="buttonRow">
+						<button className="customButton">
+							<a href="#about">Connect with me</a>
+						</button>
+						<button className="getStartedLink">
+							<a href="#projects">Get Started</a>
+						</button>
+					</div>
+
+					<div className="social-icons">
+						<a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+						<img src={githubIcon} alt="GitHub" className="icon githubIcon" />
+						</a>
+						<a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+						<img src={linkedinIcon} alt="LinkedIn" className="icon linkedinIcon" />
+						</a>
+					</div>
 				</div>
 			</div>
 			<div className="fade-in backdrop" id="about">
