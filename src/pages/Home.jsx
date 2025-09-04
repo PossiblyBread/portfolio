@@ -3,6 +3,7 @@ import SkillCard from "../components/Card/SkillCard.jsx";
 
 import imageTeto from '../assets/images/pearto.jpg';
 import imageCirno from '../assets/images/cirno.jpg';  
+
 import css3Icon from "../assets/icons/css3.svg";
 import gitIcon from "../assets/icons/git.svg";
 import html5Icon from "../assets/icons/html5.svg";
@@ -10,6 +11,14 @@ import jsIcon from "../assets/icons/javascript.svg";
 import mysqlIcon from "../assets/icons/mysql.svg";
 import phpIcon from "../assets/icons/php.svg";
 import reactIcon from "../assets/icons/react.svg";
+import bootstrapIcon from '../assets/icons/bootstrap.svg';
+import vsCodeIcon from '../assets/icons/vs-code.svg';
+import xamppIcon from '../assets/icons/xampp.svg';
+import cloudflareIcon from '../assets/icons/cloudflare.svg';
+import hostingerIcon from '../assets/icons/hostinger.svg';
+
+
+import githubWhiteIcon from '../assets/icons/github-white.svg';
 import githubIcon from '../assets/icons/github.svg';
 import linkedinIcon from '../assets/icons/linkedin.svg';
 
@@ -68,26 +77,42 @@ function Home() {
 					</div>
 				</div>
 			</div>
-			<div className="centered skills-section fade-in glassy-fx" id="skills">
+			 <div className="skills-section centered" id="skills">
 				<h2>Skills / Tech Stack</h2>
+				<h3>Languages & Frameworks</h3>
 				<div className="skills-grid">
 					<SkillCard icon={html5Icon} label="HTML5" />
 					<SkillCard icon={css3Icon} label="CSS3" />
 					<SkillCard icon={jsIcon} label="JavaScript" />
 					<SkillCard icon={phpIcon} label="PHP" />
-					<SkillCard icon={mysqlIcon} label="MySQL" />
 					<SkillCard icon={reactIcon} label="React" />
+					<SkillCard icon={bootstrapIcon} label="Bootstrap" />
+				</div>
+				<h3>Databases & Local Dev</h3>
+				<div className="skills-grid">
+					<SkillCard icon={mysqlIcon} label="MySQL" />
+					<SkillCard icon={xamppIcon} label="XAMPP" />
+				</div>
+				<h3>Version Control & Tools</h3>
+				<div className="skills-grid">
 					<SkillCard icon={gitIcon} label="Git" />
+					<SkillCard icon={githubWhiteIcon} label="GitHub" />
+					<SkillCard icon={vsCodeIcon} label="VS Code" />
+				</div>
+				<h3>Hosting & Cloud</h3>
+				<div className="skills-grid">
+					<SkillCard icon={hostingerIcon} label="Hostinger" />
+					<SkillCard icon={cloudflareIcon} label="Cloudflare" />
 				</div>
 			</div>
-			<div className="centered">
+			<div className="projects-section centered" id="projects">
 				<h2>Projects</h2>
-				<div className="container">
+				<div className="projects-container">
 					<Card src={imageTeto} Name="Authentication System" Text="An authentication system featuring user registration, login, and email verification. Developed with PHP and MySQL for safe and efficient account management." link="/projects/AuthSystem" variant="smallCard" border/>
 					<Card src={imageCirno} Name="Email Sending System (PHPMailer)" Text="Implemented email sending functionality using PHPMailer and Composer, enabling features like contact forms and account confirmation messages." link="/projects/EmailSender" variant="smallCard" border/>
 					<Card src={imageTeto} Name="Inventory Management System" Text="A system to monitor stock levels, track product movements, and generate reports. Designed to help businesses maintain accurate inventory records." link="/projects/IMS" variant="smallCard" border/>
 					<Card src={imageCirno} Name="Ledger System" Text="A record-keeping tool for managing financial transactions, tracking account balances, and maintaining a clear history of entries. Built with PHP and MySQL." link="/projects/LedgerSystem" variant="smallCard" border/>
-					<Card src={imageTeto} Name="Payroll System" Text="An automated payroll solution that calculates employee net pay with deductions, manages work hours, and generates organized payslips." link="/projects/PayrollSystem" variant="smallCard" border/>
+					<Card src={imageTeto} Name="Payroll System" Text="A payroll system that calculates employee net pay with deductions, manages work hours, and generates organized payslips." link="/projects/PayrollSystem" variant="smallCard" border/>
 					<Card src={imageCirno} Name="Ticketing System" Text="A web-based ticketing platform for managing support requests, tracking status, and assigning issues. Built with PHP and MySQL for efficient data handling." variant="smallCard" link="/projects/TicketingSystem" border/>
 				</div>
 			</div>

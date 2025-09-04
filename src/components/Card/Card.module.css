@@ -34,9 +34,8 @@
   height: 250%;
   opacity: 0.15; 
 }
-.card h3,
-.card p {
-  padding: 5px 10px;
+.card h3, .card p {
+  padding: 10px 15px;
 }
 .cardName {
   margin: 5px 0;
@@ -53,7 +52,7 @@
 .cardImageWrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 12; 
+  aspect-ratio: 16 / 10; 
   overflow: hidden;
   border-radius: 10px;
 }
@@ -99,4 +98,9 @@
 .cardLink:hover::after {
   right: -5px;   
   opacity: 1;    
+}
+@media (max-width: 480px) {
+  .card h3, .card p {
+    padding: 5px 10px;
+  }
 }

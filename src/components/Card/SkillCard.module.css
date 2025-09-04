@@ -2,14 +2,13 @@
   background: var(--surface-color);
   box-shadow: var(--shadow-soft);
   border-radius: 12px;
-  padding: 1.5rem 1rem;
+  padding: 1.5remm;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   min-height: 150px;
-  border: var(--shadow-soft);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .skillCard:hover {
@@ -22,13 +21,12 @@
   height: 60px !important;
   object-fit: contain;
   margin-bottom: 0.5rem;
-  transition: transform 0.3s ease-in-out; 
+  transition: transform 0.3s ease;
 }
 .skillCard:hover .icon {
-  transform: rotate(10deg);
+  transform: translateY(-5px) translateX(-5px) rotate(-5deg);
 }
 .label {
   margin: 0;
-  color: var(--text-color);
   text-align: center;
 }

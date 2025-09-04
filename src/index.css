@@ -117,125 +117,6 @@ small {
   justify-content: center;
   align-items: center;
 }
-.centered {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.container {
-  background-color: var(--surface-color);
-  border: 1px solid color-mix(in oklab, var(--text-color) 14%, transparent);
-  box-shadow: var(--shadow-soft);
-  border-radius: 15px;
-  padding: 30px 20px 20px 20px;
-  margin: 10px 15px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
-  justify-content: center;
-  gap: 20px;
-}
-/* scroll effects */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-.slide-left, .slide-right {
-    opacity: 0;
-    transition: transform 0.5s ease-in, opacity 0.5s ease-in;
-}
-.slide-left {
-    transform: translateX(-100px);
-}
-.slide-right {
-    transform: translateX(70px);
-}
-.slide-left.show, .slide-right.show {
-    opacity: 1;
-    transform: translateX(0);
-}
-.skills-section {
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-  align-items: stretch; /* ensures all cards stretch equally vertically */
-}
-
-/* Form */
-.form-container h1 {
-  text-align: center;
-  color: var(--primary-color);
-}
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 25px auto;
-  padding: 20px;
-  background-color: var(--surface-color);
-  border-radius: 12px;
-  box-shadow: var(--shadow-medium);
-  color: var(--text-color);
-  min-width: 250px;
-  max-width: 700px;
-}
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.contact-form label {
-  display: flex;
-  flex-direction: column;
-  color: var(--text-color);
-}
-.contact-form input,
-.contact-form textarea {
-  margin-top: 0.4rem;
-  padding: 0.7rem;
-  border: 1px solid var(--muted-color);
-  border-radius: 8px;
-  background: var(--background-color);
-  color: var(--text-color);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.25); 
-  outline: none;
-}
-.contact-form textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-.contact-form button {
-  background: var(--primary-color);
-  color: white;
-  padding: 0.8rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.1s ease;
-}
-.contact-form button:hover {
-  background: var(--secondary-color);
-  transform: translateY(-2px);
-}
-.contact-form button:active {
-  transform: translateY(0);
-}
 .profileButtons {
   display: flex;
   flex-direction: column;
@@ -313,11 +194,20 @@ small {
   transform: scale(1.15);
   filter: none;
 }
+/* hero */
 .githubIcon {
   filter: invert(1.5) brightness(0.5);
   background-color: white;
   border-radius: 50%;
   padding: 0;
+}
+/* skills */
+.github img {
+  filter: invert(1); 
+  transition: filter 0.2s ease;
+}
+.github img:hover {
+  filter: invert(1) brightness(1.2); 
 }
 .linkedinIcon {
   filter: brightness(0.5);
@@ -325,3 +215,130 @@ small {
   border-radius: 10px;
   padding: 0;
 }
+.centered {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* scroll effects */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.slide-left, .slide-right {
+    opacity: 0;
+    transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+}
+.slide-left {
+    transform: translateX(-100px);
+}
+.slide-right {
+    transform: translateX(70px);
+}
+.slide-left.show, .slide-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* skills */
+.skills-section {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+.skills-section h3 {
+  margin-top: 2rem;
+  color: var(--text-color);
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  margin-top: 1rem;
+  align-items: stretch; 
+}
+/* projects */
+.projects-section h2 {
+  text-align: center;
+}
+.projects-container {
+  /* background-color: var(--surface-color);
+  border: 1px solid color-mix(in oklab, var(--text-color) 14%, transparent);
+  box-shadow: var(--shadow-soft); */
+  border-radius: 15px;
+  padding: 30px 20px 20px 20px;
+  margin: 10px 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+  justify-content: center;
+  gap: 20px;  
+}
+/* Form */
+.form-container h1 {
+  text-align: center;
+  color: var(--primary-color);
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 25px auto;
+  padding: 20px;
+  background-color: var(--surface-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-medium);
+  color: var(--text-color);
+  min-width: 250px;
+  max-width: 700px;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+}
+.contact-form input,
+.contact-form textarea {
+  margin-top: 0.4rem;
+  padding: 0.7rem;
+  border: 1px solid var(--muted-color);
+  border-radius: 8px;
+  background: var(--background-color);
+  color: var(--text-color);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.25); 
+  outline: none;
+}
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.contact-form button {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.contact-form button:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+}
+.contact-form button:active {
+  transform: translateY(0);
+}
+
