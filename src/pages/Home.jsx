@@ -1,32 +1,54 @@
 import Card from "../components/Card/Card.jsx";
+import SkillCard from "../components/Card/SkillCard.jsx";
 
 import imageTeto from '../assets/images/pearto.jpg';
 import imageCirno from '../assets/images/cirno.jpg';  
+import css3Icon from "../assets/icons/css3.svg";
+import gitIcon from "../assets/icons/git.svg";
+import html5Icon from "../assets/icons/html5.svg";
+import jsIcon from "../assets/icons/javascript.svg";
+import mysqlIcon from "../assets/icons/mysql.svg";
+import phpIcon from "../assets/icons/php.svg";
+import reactIcon from "../assets/icons/react.svg";
 import githubIcon from '../assets/icons/github.svg';
 import linkedinIcon from '../assets/icons/linkedin.svg';
 
 import useScrollAnimations from "../util/script.js";
+
 function Home() {
+
+	const clickToView = (e, targetId) => {
+
+		e.preventDefault();
+		const element = document.querySelector(targetId);
+		if (element) {
+			const yOffset = -100; 
+			const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+			window.scrollTo({ top: y, behavior: "smooth" });
+		}
+	};
+
 	useScrollAnimations();
+
 	return (
 		<>
 			<div className="profile hero" id="hero">
 				<img src={imageCirno} alt="Profile" className="profile-image circle" />
-				<h1 className="gradient-text">Hello, I'm Adrian</h1>
+				<h1 className="gradient-text">Hello, I'm Adrian!</h1>
 				<h3>Full Stack Developer</h3>		
 				<p>I'm a machine that turns coffee into pee</p>
 				<div className="profileButtons">
 					<div className="buttonRow">
-						<button className="customButton">
-							<a href="#contact-form">Connect with me</a>
+						<button className="customButton" onClick={(e) => clickToView(e, "#contact-form")}>
+							Connect with me
 						</button>
-						<button className="getStartedLink">
-							<a href="#projects">Get Started</a>
+						<button className="getStartedLink" onClick={(e) => clickToView(e, "#about")}>
+							Get Started
 						</button>
 					</div>
-
 					<div className="social-icons">
-						<a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+						<a href="https://github.com/PossiblyBread" target="_blank" rel="noopener noreferrer">
 						<img src={githubIcon} alt="GitHub" className="icon githubIcon" />
 						</a>
 						<a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
@@ -39,23 +61,27 @@ function Home() {
 				<div className="centered">
 					<div className="">
 						<h2>About</h2>
-						<p>I’m Adrian, a Full Stack Developer passionate about building functional and reliable web applications. 
-							I enjoy working across the stack, from developing responsive frontends to designing efficient backends and databases. 
-							Most of all, I love solving real-world problems through clean code and practical solutions.
-
-							I constantly explore new tools and technologies, not just to keep up with the industry, but to improve the way I build and deliver projects. 
-							My focus is on creating applications that are scalable, maintainable, and easy for users to interact with.</p>
+						<p>
+							I’m a full stack developer who enjoys creating applications that are simple, reliable, and easy to use.  
+							I like working across the stack and exploring new tools that make building and maintaining projects more efficient.  
+						</p>
 					</div>
-					<h2>Skills / Tech Stack</h2>
-					{/* projects */}
-					<h2>Experience</h2>
-					<h2>Testimonials </h2>
-					<h2>Certifications and Achievements</h2>
-					<h2>Hobbies / Interests</h2>
-					{/* Contact Form */}
+				</div>
+			</div>
+			<div className="centered skills-section fade-in glassy-fx" id="skills">
+				<h2>Skills / Tech Stack</h2>
+				<div className="skills-grid">
+					<SkillCard icon={html5Icon} label="HTML5" />
+					<SkillCard icon={css3Icon} label="CSS3" />
+					<SkillCard icon={jsIcon} label="JavaScript" />
+					<SkillCard icon={phpIcon} label="PHP" />
+					<SkillCard icon={mysqlIcon} label="MySQL" />
+					<SkillCard icon={reactIcon} label="React" />
+					<SkillCard icon={gitIcon} label="Git" />
 				</div>
 			</div>
 			<div className="centered">
+				<h2>Projects</h2>
 				<div className="container">
 					<Card src={imageTeto} Name="Authentication System" Text="An authentication system featuring user registration, login, and email verification. Developed with PHP and MySQL for safe and efficient account management." link="/projects/AuthSystem" variant="smallCard" border/>
 					<Card src={imageCirno} Name="Email Sending System (PHPMailer)" Text="Implemented email sending functionality using PHPMailer and Composer, enabling features like contact forms and account confirmation messages." link="/projects/EmailSender" variant="smallCard" border/>
@@ -64,6 +90,10 @@ function Home() {
 					<Card src={imageTeto} Name="Payroll System" Text="An automated payroll solution that calculates employee net pay with deductions, manages work hours, and generates organized payslips." link="/projects/PayrollSystem" variant="smallCard" border/>
 					<Card src={imageCirno} Name="Ticketing System" Text="A web-based ticketing platform for managing support requests, tracking status, and assigning issues. Built with PHP and MySQL for efficient data handling." variant="smallCard" link="/projects/TicketingSystem" border/>
 				</div>
+			</div>
+			<div className="centered">
+				<h2>Certifications and Achievements</h2>
+				<h2>Hobbies / Interests</h2>
 			</div>
 			<div className="form-container" id="contact-form">
 				<h1> Contact Me </h1>

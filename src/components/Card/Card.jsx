@@ -4,7 +4,9 @@ import { Link as RouterLink } from "react-router-dom";
 function Card({ src, Name, Text, link, variant = "small", children, border }) {
   return (
     <div className={`${styles.card} ${styles[variant]} ${border ? styles.border : ""}`}>
-      {src && <img src={src} alt={Name} className={styles.cardImage} />}
+      <div className={styles.cardImageWrapper}>
+        <img src={src} alt={Name} className={styles.cardImage} />
+      </div>
       {Name && <h3 className={styles.cardName}>{Name}</h3>}
       {Text && <p className={styles.cardText}>{Text}</p>}
       {children}

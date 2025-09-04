@@ -40,36 +40,37 @@ body {
   line-height: 1.55;
 }
 h1 {
-  font-size: 32px;
+  font-size: clamp(1.75rem, 2.5vw, 2.5rem); 
+  color: var(--primary-color);
   font-weight: bold;
 }
 h2 {
-  font-size: 24px;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  color: var(--primary-color);
   font-weight: bold;
 }
 h3 {
-  font-size: 20px;
+  font-size: clamp(1.25rem, 1.75vw, 1.5rem); 
+  color: var(--primary-color);
   font-weight: bold;
 }
 h4 {
-  font-size: 18px;
+  font-size: clamp(1.125rem, 1.5vw, 1.25rem); 
+  color: var(--primary-color);
   font-weight: bold;
 }
 label {
   font-weight: 600;
 }
-p {
-  font-size: 18px;
+p, textarea, input, button {
+  font-size: clamp(1rem, 1.25vw, 1.125rem); 
 }
 a {
-  font-size: 18px;
+  font-size: clamp(1rem, 1.25vw, 1.125rem);
   text-decoration: none;
 }
-textarea, input, button {
-  font-size: 18px;
-}
 small {
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, 1vw, 0.875rem);
 }
 .profile {
   display: flex;
@@ -91,17 +92,21 @@ small {
 }
 .profile p {
   max-width: 600px;
+  line-height: 1;
   margin: 5px auto;
   color: var(--secondary-color);
 }
 .profile-image {
-  width: 50px;
-  height: auto;
-  min-width: 250px;
-  max-width: 300px;
-  border-radius: 50%;
+  width: 100%;  
+  position: relative;       
+  max-width: 250px;    
+  height: auto;        
+  border-radius: 50%; 
   border: 2px solid var(--muted-color);
+  display: block;       
+  margin: 0 auto;      
 }
+
 .glassy-fx {
   backdrop-filter: blur(10px); 
   transition: all 0.3s ease-in-out; 
@@ -115,6 +120,20 @@ small {
 .centered {
   max-width: 1100px;
   margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.container {
+  background-color: var(--surface-color);
+  border: 1px solid color-mix(in oklab, var(--text-color) 14%, transparent);
+  box-shadow: var(--shadow-soft);
+  border-radius: 15px;
+  padding: 30px 20px 20px 20px;
+  margin: 10px 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+  justify-content: center;
+  gap: 20px;
 }
 /* scroll effects */
 .fade-in {
@@ -140,24 +159,19 @@ small {
     opacity: 1;
     transform: translateX(0);
 }
-/* Container */
-.container {
-  background-color: var(--surface-color);
-  border-radius: 15px;
-  padding: 30px 20px 20px 20px;
-  margin: 10px 15px;
-  border: 1px solid color-mix(in oklab, var(--text-color) 14%, transparent);
-  box-shadow: var(--shadow-soft);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
-  justify-content: center;
-  gap: 20px;
+.skills-section {
+  padding: 3rem 1.5rem;
+  text-align: center;
 }
 
-.container h2 {
-    color: var(--text-color);
-    margin-top: 0;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: stretch; /* ensures all cards stretch equally vertically */
 }
+
 /* Form */
 .form-container h1 {
   text-align: center;
@@ -232,7 +246,7 @@ small {
 .buttonRow {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap; 
+  flex-wrap: wrap; justify-content: center;
 }
 .profileButtons a {
   text-decoration: none;
@@ -281,10 +295,6 @@ small {
 .getStartedLink::after {
   content: "▼"; 
   font-size: 0.8rem;
-  transition: transform 0.3s ease-in-out;
-}
-.getStartedLink:hover::after {
-  transform: translateY(5px);
 }
 .social-icons {
   display: flex;
