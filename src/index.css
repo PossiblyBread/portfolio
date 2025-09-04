@@ -24,13 +24,20 @@
   --shadow-medium: 0 4px 12px rgba(110,168,254, 0.15);
   --shadow-strong: 0 8px 20px rgba(110,168,254, .25);
 }
-html, body {
-  height: 100%;
-  font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  font-size: clamp(1rem, 0.95rem + 0.5vw, 1.125rem); 
-  background-color: var(--background-color);
+html, body { 
+  height: 100%; }
+  * { box-sizing: border-box; }
+body {
   margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--text-color);
+  background: radial-gradient(1200px 800px at 80% -20%, rgba(110,168,254,0.15), transparent 60%),
+              radial-gradient(800px 600px at -10% 20%, rgba(255,183,77,0.15), transparent 60%),
+              var(--background-color);
+  background-repeat: no-repeat;  
+  background-size: cover;       
+  background-attachment: fixed;
+  line-height: 1.55;
 }
 h1 {
   font-size: 32px;
@@ -70,14 +77,22 @@ small {
   align-items: center;
   flex-direction: column;
   line-height: 0.5;
+  padding: 10px;
+  text-align: center; 
 }
 .profile h1 {
   font-size: 40px;
   font-weight: bolder;
   color: var(--primary-color) !important;
+  line-height: 1;
 }
 .profile h3 {
   color: var(--secondary-color) !important;
+}
+.profile p {
+  max-width: 600px;
+  margin: 5px auto;
+  color: var(--secondary-color);
 }
 .profile-image {
   width: 50px;
@@ -87,18 +102,9 @@ small {
   border-radius: 50%;
   border: 2px solid var(--muted-color);
 }
-.main-content {
-  margin: 0 0 0 310px;
-  min-height: 85dvh;
-  padding-bottom: auto;
-}
 .glassy-fx {
-    backdrop-filter: blur(10px); 
-    transition: all 0.3s ease-in-out; 
-}
-.backdrop {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 30px;
+  backdrop-filter: blur(10px); 
+  transition: all 0.3s ease-in-out; 
 }
 .hero {
   min-height: 90vh;
@@ -142,11 +148,9 @@ small {
   margin: 10px 15px;
   border: 1px solid color-mix(in oklab, var(--text-color) 14%, transparent);
   box-shadow: var(--shadow-soft);
-
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
-justify-content: center;
-
+  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+  justify-content: center;
   gap: 20px;
 }
 
@@ -218,14 +222,7 @@ justify-content: center;
 .contact-form button:active {
   transform: translateY(0);
 }
-/* @media (max-width: 480px) {
-  .container {
-    margin: 5px;
-    padding: 20px 5px 5px 5px;
-    gap: 15px;
-  }
-} */
- .profileButtons {
+.profileButtons {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -235,6 +232,7 @@ justify-content: center;
 .buttonRow {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap; 
 }
 .profileButtons a {
   text-decoration: none;
@@ -253,9 +251,10 @@ justify-content: center;
   text-align: center;
 }
 .profileButtons button {
-  background: var(--primary-color);
+  background: color-mix(in oklab, var(--primary-color) 14%, transparent);
   color: var(--text-color);
   box-shadow: var(--shadow-medium);
+  border: 1px solid color-mix(in oklab, var(--primary-color) 34%, transparent);
 }
 .profileButtons button:hover {
   transform: translateY(-2px);
@@ -263,7 +262,7 @@ justify-content: center;
 }
 .profileButtons .customButton {
   background: transparent;
-  border: 2px solid var(--primary-color);
+  border: 1px solid color-mix(in oklab, var(--primary-color) 34%, transparent);
   color: var(--primary-color);
 }
 .profileButtons .customButton:hover {

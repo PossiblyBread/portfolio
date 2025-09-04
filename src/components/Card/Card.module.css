@@ -1,13 +1,15 @@
 .card {
   position: relative; 
   color: var(--text-color);
+  background: var(--surface-color);
+  border: 1px solid color-mix(in oklab, var(--text-color) 14%, transparent);
   border-radius: 15px;
   display: flex;              
   flex-direction: column;     
   justify-content: space-between;
   overflow: hidden; 
-  min-width: 250px;
-  
+  width: clamp(200px, 100%, 350px);
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 .card::before {
   content: "";
@@ -16,17 +18,16 @@
   left: 50%;
   width: 0;
   height: 0;
-  background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+  background: linear-gradient(90deg, var(--primary-color), color-mix(in oklab, var(--highlight-color) 60%, var(--primary-color)));
   border-radius: 50%;
   opacity: 0;
   transform: translate(-50%, -50%);
-  transition: all 0.4s ease;
   z-index: -1;
+  transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
 }
 .card:hover {
   background-color: var(--surface-color);
   transform: scale(1.03);
-  transition: 0.2s ease-in-out;
 }
 .card:hover::before {
   width: 250%;
@@ -60,9 +61,6 @@
 .smallCard {
   max-width: 350px;
   min-width: 250px;
-}
-.profileCard {
-  width: 250px;
 }
 .cardLinkWrapper {
   display: flex;

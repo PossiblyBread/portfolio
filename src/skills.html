@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skills & Tech Stack – Demo</title>
+  <style>
+    /* ===== Theme Tokens (works with your dark-mode vars) ===== */
+    :root {
+      --text-color: #0b0d10;             /* fallback for light */
+      --background-color: #ffffff;
+      --surface-color: #f5f7fb;
+      --primary-color: #6ea8fe;
+      --secondary-color: #455a64;
+      --muted-color: #5b6672;
+      --success-color: #2e7d32;
+      --highlight-color: #ffb74d;
+      --shadow-soft: 0 2px 6px rgba(110,168,254, 0.10);
+      --shadow-medium: 0 4px 12px rgba(110,168,254, 0.15);
+      --shadow-strong: 0 8px 20px rgba(110,168,254, 0.25);
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --radius-sm: 10px;
+      --maxw: 1100px;
+    }
+
+    /* Toggle this class on <body> to preview dark mode */
+    .dark-mode {
+      --text-color: #e7ecf3;
+      --background-color: #0b0d10;
+      --surface-color: #111418;
+      --primary-color: #6ea8fe;
+      --secondary-color: #455a64;
+      --muted-color: #8f8f8f;
+      --success-color: #8ce99a;
+      --highlight-color: #ffb74d;
+      --shadow-soft: 0 2px 6px rgba(110,168,254, 0.10);
+      --shadow-medium: 0 4px 12px rgba(110,168,254, 0.15);
+      --shadow-strong: 0 8px 20px rgba(110,168,254, 0.25);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text-color);
+      background: radial-gradient(1200px 800px at 80% -20%, rgba(110,168,254,0.15), transparent 60%),
+                  radial-gradient(800px 600px at -10% 20%, rgba(255,183,77,0.15), transparent 60%),
+                  var(--background-color);
+      line-height: 1.55;
+    }
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 28px;
+    }
+
+    .title {
+      font-size: clamp(1.4rem, 1.1rem + 1.4vw, 2rem);
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .subtitle {
+      color: var(--muted-color);
+      margin-top: 6px;
+      font-size: 0.98rem;
+    }
+
+    .toggle {
+      border: 1px solid color-mix(in oklab, var(--text-color) 16%, transparent);
+      background: var(--surface-color);
+      color: var(--text-color);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: var(--shadow-soft);
+      transition: transform .2s ease, box-shadow .2s ease;
+      font-weight: 600;
+    }
+    .toggle:hover { transform: translateY(-1px); box-shadow: var(--shadow-medium); }
+
+    /* ===== Section Card ===== */
+    .card {
+      background: var(--surface-color);
+      border: 1px solid color-mix(in oklab, var(--text-color) 14%, transparent);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      box-shadow: var(--shadow-soft);
+      transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-medium); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .col-6 { grid-column: span 12; }
+    .col-3 { grid-column: span 12; }
+    @media (min-width: 720px) {
+      .col-6 { grid-column: span 6; }
+      .col-3 { grid-column: span 3; }
+    }
+
+    /* ===== Pills / Badges ===== */
+    .pill-wrap { display: flex; flex-wrap: wrap; gap: 10px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-weight: 600;
+      background: color-mix(in oklab, var(--primary-color) 14%, transparent);
+      border: 1px solid color-mix(in oklab, var(--primary-color) 34%, transparent);
+      box-shadow: var(--shadow-soft);
+      transition: transform .18s ease, box-shadow .2s ease;
+      white-space: nowrap;
+    }
+    .pill:hover { transform: translateY(-1px); box-shadow: var(--shadow-medium); }
+    .pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary-color); }
+
+    /* ===== Proficiency Bars ===== */
+    .skill {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 8px;
+      margin: 10px 0 14px;
+    }
+    .skill-name { font-weight: 700; }
+    .meter {
+      grid-column: 1 / -1;
+      position: relative;
+      height: 10px;
+      background: color-mix(in oklab, var(--text-color) 8%, transparent);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .meter > span {
+      display: block;
+      height: 100%;
+      width: var(--val, 60%);
+      background: linear-gradient(90deg, var(--primary-color), color-mix(in oklab, var(--highlight-color) 60%, var(--primary-color)));
+      border-radius: inherit;
+      transition: width .6s ease;
+    }
+
+    /* ===== Soft skill badges ===== */
+    .soft-wrap { display: flex; flex-wrap: wrap; gap: 10px; }
+    .soft {
+      background: color-mix(in oklab, var(--text-color) 8%, transparent);
+      color: var(--text-color);
+      border: 1px solid color-mix(in oklab, var(--text-color) 16%, transparent);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    /* ===== Section headings ===== */
+    h2 { font-size: 1.2rem; margin: 0 0 12px; }
+    h3 { margin: 0 0 6px; font-size: 1rem; color: var(--muted-color); font-weight: 700; }
+    .hint { color: var(--muted-color); font-size: .95rem; }
+
+    footer { margin-top: 42px; color: var(--muted-color); font-size: .92rem; text-align: center; }
+    a.inline { color: var(--primary-color); text-decoration: none; font-weight: 700; }
+    a.inline:hover { color: var(--highlight-color); }
+  </style>
+</head>
+<body class="dark-mode">
+  <div class="container">
+    <header>
+      <div>
+        <div class="title">Skills & Tools</div>
+        <div class="subtitle">A compact, recruiter-friendly layout that separates your tech stack, proficiencies, and soft skills.</div>
+      </div>
+      <button class="toggle" id="toggleTheme" aria-pressed="true">Toggle Theme</button>
+    </header>
+
+    <section class="grid">
+      <!-- Tech Stack (Badges) -->
+      <div class="card col-6">
+        <h2>Tech Stack</h2>
+        <p class="hint">Languages, frameworks, databases & tools you use regularly.</p>
+        <div class="pill-wrap" aria-label="Tech stack badges">
+          <span class="pill" title="JavaScript"><span class="dot"></span> JavaScript</span>
+          <span class="pill" title="React"><span class="dot"></span> React</span>
+          <span class="pill" title="PHP"><span class="dot"></span> PHP</span>
+          <span class="pill" title="MySQL"><span class="dot"></span> MySQL</span>
+          <span class="pill" title="Node.js"><span class="dot"></span> Node.js</span>
+          <span class="pill" title="HTML5"><span class="dot"></span> HTML5</span>
+          <span class="pill" title="CSS3"><span class="dot"></span> CSS3</span>
+          <span class="pill" title="Tailwind / Bootstrap"><span class="dot"></span> Tailwind / Bootstrap</span>
+          <span class="pill" title="Git / GitHub"><span class="dot"></span> Git / GitHub</span>
+        </div>
+      </div>
+
+      <!-- Proficiency (Meters) -->
+      <div class="card col-6">
+        <h2>Proficiency</h2>
+        <p class="hint">Show comfort level for your core tools.</p>
+        <div class="skill">
+          <div class="skill-name">React</div>
+          <div class="hint">Advanced</div>
+          <div class="meter"><span style="--val: 85%"></span></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">PHP</div>
+          <div class="hint">Intermediate</div>
+          <div class="meter"><span style="--val: 70%"></span></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">MySQL</div>
+          <div class="hint">Intermediate</div>
+          <div class="meter"><span style="--val: 72%"></span></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">JavaScript</div>
+          <div class="hint">Advanced</div>
+          <div class="meter"><span style="--val: 88%"></span></div>
+        </div>
+      </div>
+
+      <!-- Soft Skills (Badges) -->
+      <div class="card col-6">
+        <h2>Soft Skills</h2>
+        <p class="hint">How you work with teams and solve problems.</p>
+        <div class="soft-wrap">
+          <span class="soft">Problem Solving</span>
+          <span class="soft">Communication</span>
+          <span class="soft">Team Collaboration</span>
+          <span class="soft">Attention to Detail</span>
+          <span class="soft">Adaptability</span>
+          <span class="soft">Time Management</span>
+        </div>
+      </div>
+
+      <!-- Highlighted Tools (Mini Cards) -->
+      <div class="card col-6">
+        <h2>Currently Using</h2>
+        <p class="hint">What powers most of your recent projects.</p>
+        <div class="pill-wrap">
+          <span class="pill" title="React + Vite"><span class="dot"></span> React + Vite</span>
+          <span class="pill" title="PHP"><span class="dot"></span> PHP</span>
+          <span class="pill" title="MySQL"><span class="dot"></span> MySQL</span>
+          <span class="pill" title="Bootstrap 5"><span class="dot"></span> Bootstrap 5</span>
+          <span class="pill" title="Tailwind CSS"><span class="dot"></span> Tailwind CSS</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Tip: Only list what you’re comfortable being asked to demonstrate. Edit labels right in the HTML.
+      &nbsp;—&nbsp;<a class="inline" href="#" onclick="prefillDemo(event)">Quick fill with your own stack</a>
+    </footer>
+  </div>
+
+  <script>
+    // Simple theme toggle to preview light/dark against your tokens
+    const btn = document.getElementById('toggleTheme');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      btn.setAttribute('aria-pressed', document.body.classList.contains('dark-mode'));
+    });
+
+    // Small helper to show how you'd customize labels quickly.
+    function prefillDemo(e){
+      e.preventDefault();
+      const replacements = {
+        'React + Vite': 'React + Router',
+        'Bootstrap 5': 'Bootstrap 5 (Utilities)',
+        'Tailwind CSS': 'Tailwind (Utility-first)'
+      };
+      document.querySelectorAll('.pill').forEach(p => {
+        const t = p.textContent.trim();
+        if(replacements[t]) p.childNodes[p.childNodes.length-1].nodeValue = ' ' + replacements[t];
+      });
+    }
+  </script>
+</body>
+</html>

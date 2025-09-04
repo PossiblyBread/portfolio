@@ -14,10 +14,11 @@ function Home() {
 				<img src={imageCirno} alt="Profile" className="profile-image circle" />
 				<h1 className="gradient-text">Hello, I'm Adrian</h1>
 				<h3>Full Stack Developer</h3>		
+				<p>I'm a machine that turns coffee into pee</p>
 				<div className="profileButtons">
 					<div className="buttonRow">
 						<button className="customButton">
-							<a href="#about">Connect with me</a>
+							<a href="#contact-form">Connect with me</a>
 						</button>
 						<button className="getStartedLink">
 							<a href="#projects">Get Started</a>
@@ -34,7 +35,7 @@ function Home() {
 					</div>
 				</div>
 			</div>
-			<div className="fade-in backdrop" id="about">
+			<div className="fade-in glassy-fx" id="about">
 				<div className="centered">
 					<div className="">
 						<h2>About</h2>
