@@ -60,7 +60,7 @@ function Home() {
 			<div className="fade-in glassy-fx" id="about">
 				<div className="centered">
 					<div className="">
-						<h2>About</h2>
+						<h2>About Me</h2>
 						<p>
 							I’m a full stack developer who enjoys creating applications that are simple, reliable, and easy to use.  
 							I like working across the stack and exploring new tools that make building and maintaining projects more efficient.  

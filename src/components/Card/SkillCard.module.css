@@ -18,15 +18,17 @@
   border-color: var(--primary-color);
 }
 .icon {
-  width: 40px !important;
-  height: 40px !important;
+  width: 60px !important;
+  height: 60px !important;
   object-fit: contain;
   margin-bottom: 0.5rem;
+  transition: transform 0.3s ease-in-out; 
+}
+.skillCard:hover .icon {
+  transform: rotate(10deg);
 }
 .label {
   margin: 0;
   color: var(--text-color);
-  font-size: 0.95rem;
-  font-weight: 500;
   text-align: center;
 }
