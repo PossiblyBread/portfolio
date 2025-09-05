@@ -1,5 +1,6 @@
 import Card from "../components/Card/Card.jsx";
 import SkillCard from "../components/Card/SkillCard.jsx";
+import Button from "../components/Button/Button.jsx"
 
 import imageTeto from '../assets/images/pearto.jpg';
 import imageCirno from '../assets/images/cirno.jpg';  
@@ -14,6 +15,7 @@ import reactIcon from "../assets/icons/react.svg";
 import bootstrapIcon from '../assets/icons/bootstrap.svg';
 import vsCodeIcon from '../assets/icons/vs-code.svg';
 import xamppIcon from '../assets/icons/xampp.svg';
+import viteIcon from '../assets/icons/vite.svg';
 import cloudflareIcon from '../assets/icons/cloudflare.svg';
 import hostingerIcon from '../assets/icons/hostinger.svg';
 
@@ -86,6 +88,7 @@ function Home() {
 					<SkillCard icon={jsIcon} label="JavaScript" />
 					<SkillCard icon={phpIcon} label="PHP" />
 					<SkillCard icon={reactIcon} label="React" />
+					<SkillCard icon={viteIcon} label="Vite" />
 					<SkillCard icon={bootstrapIcon} label="Bootstrap" />
 				</div>
 				<h3>Databases & Local Dev</h3>
@@ -107,7 +110,10 @@ function Home() {
 			</div>
 			<div className="projects-section centered" id="projects">
 				<h2>Projects</h2>
+				
+				<Button>Primary</Button>
 				<div className="projects-container">
+					
 					<Card src={imageTeto} Name="Authentication System" Text="An authentication system featuring user registration, login, and email verification. Developed with PHP and MySQL for safe and efficient account management." link="/projects/AuthSystem" variant="smallCard" border/>
 					<Card src={imageCirno} Name="Email Sending System (PHPMailer)" Text="Implemented email sending functionality using PHPMailer and Composer, enabling features like contact forms and account confirmation messages." link="/projects/EmailSender" variant="smallCard" border/>
 					<Card src={imageTeto} Name="Inventory Management System" Text="A system to monitor stock levels, track product movements, and generate reports. Designed to help businesses maintain accurate inventory records." link="/projects/IMS" variant="smallCard" border/>
@@ -120,7 +126,7 @@ function Home() {
 				<h2>Certifications and Achievements</h2>
 			</div>
 			<div className="form-container" id="contact-form">
-				<h1> Contact Me </h1>
+				<h2> Contact Me </h2>
 				<div className="contact-form">
 					<form action="https://formspree.io/f/xgvlvgab" method="POST"> 
 						<label>Your Name:

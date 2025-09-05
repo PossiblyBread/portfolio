@@ -161,12 +161,12 @@ small {
   color: var(--primary-color);
 }
 .profileButtons .customButton:hover {
-  background: var(--primary-color);
+  background: color-mix(in srgb, var(--primary-color) 50%, var(--surface-color));
   color: var(--text-color);
   transform: translateY(-2px);
   box-shadow: var(--shadow-medium);
-
-}.getStartedLink {
+}
+.getStartedLink {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -278,10 +278,6 @@ small {
   gap: 20px;  
 }
 /* Form */
-.form-container h1 {
-  text-align: center;
-  color: var(--primary-color);
-}
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -294,6 +290,9 @@ small {
   color: var(--text-color);
   min-width: 250px;
   max-width: 700px;
+}
+.form-container h2 {
+  text-align: center;
 }
 .contact-form form {
   display: flex;
