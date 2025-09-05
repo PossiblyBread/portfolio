@@ -21,7 +21,7 @@ function Footer() {
           <ul>
             <li><a href="#hero" onClick={(e) => clickToView(e, "#hero")}>Home</a></li>
             <li><a href="#about" onClick={(e) => clickToView(e, "#about")}>About</a></li>
-            <li><a href="#projects" onClick={(e) => clickToView(e, "#contact-form")}>Projects</a></li>
+            <li><a href="#projects" onClick={(e) => clickToView(e, "#projects")}>Projects</a></li>
             <li><a href="#contact-form" onClick={(e) => clickToView(e, "#contact-form")}>Contact</a></li>
           </ul>
         </div>

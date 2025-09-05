@@ -118,7 +118,6 @@ function Home() {
 			</div>
 			<div className="centered">
 				<h2>Certifications and Achievements</h2>
-				<h2>Hobbies / Interests</h2>
 			</div>
 			<div className="form-container" id="contact-form">
 				<h1> Contact Me </h1>
