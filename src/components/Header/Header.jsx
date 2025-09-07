@@ -1,6 +1,6 @@
 import { useLocation, NavLink } from "react-router-dom"; 
 import styles from "./Header.module.css";
-import LightModeSwitch from "../Switch/darkmodeswitch/DarkModeSwitch";
+import DarkModeToggle from "../Button/DarkModeToggle/DarkModeToggle";
 import { useState } from "react";
 
 function Header() {
@@ -14,9 +14,7 @@ function Header() {
 
   return (
     <header className={styles.headerNav}>
-      <LightModeSwitch />
       {mobileOpen && <div className={styles.backdrop} onClick={toggleMobile}></div>}
-
       <nav className={`${styles.navWrapper} ${mobileOpen ? styles.open : ""}`}>
         <button className={`${styles.hamburger} ${styles.mobileClose}`} onClick={toggleMobile} aria-label="Close navigation">
           <span className={mobileOpen ? styles.hamburgerOpen : ""}></span>
@@ -38,6 +36,9 @@ function Header() {
             </ul>
           </li>
         </ul>
+        <div className={styles.togglecontainer}>
+          <div className={styles.right} ><DarkModeToggle /></div>
+        </div>
       </nav>
       <button className={styles.hamburger} onClick={toggleMobile} aria-label="Toggle navigation">
         <span className={mobileOpen ? styles.hamburgerOpen : ""}></span>

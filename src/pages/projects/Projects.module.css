@@ -1,17 +1,15 @@
-.authsystem {   
+.projects {   
   color: var(--text-color);
   max-width: 1100px;
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
 }
-
 .title {
   text-align: center;
   margin-bottom: 1rem;
   color: var(--primary-color);
 }
-
 .intro {
   max-width: 700px;
   margin: 0 auto 3rem auto;
@@ -19,7 +17,6 @@
   color: var(--secondary-color);
   line-height: 1.6;
 }
-
 .features {
   display: flex;
   flex-direction: column;

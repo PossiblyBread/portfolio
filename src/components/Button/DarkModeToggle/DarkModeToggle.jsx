@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import styles from "../Switch.module.css";
+import ButtonToggle from "../ButtonToggle.jsx";
 
-function DarkModeSwitch() {
+function DarkModeToggle() {
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("darkMode") === "true";
   });
@@ -16,15 +16,8 @@ function DarkModeSwitch() {
   }, [darkMode]);
 
   return (
-    <label className={styles.switch}>
-      <input
-        type="checkbox"
-        checked={darkMode}
-        onChange={() => setDarkMode(!darkMode)}
-      />
-      <span className={styles.slider}></span>
-    </label>
+    <ButtonToggle isActive={darkMode} onToggle={() => setDarkMode(!darkMode)} activeLabel="Toggle Theme" inactiveLabel="Toggle Theme" />
   );
 }
 
-export default DarkModeSwitch;
+export default DarkModeToggle;

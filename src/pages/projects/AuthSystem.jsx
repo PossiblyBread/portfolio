@@ -1,9 +1,9 @@
-import styles from "./AuthSystem.module.css";
+import styles from "./Projects.module.css";
 import CardFeature from "../../components/Card/CardFeature.jsx";
 
 function AuthSystem() {
   return (
-    <section className={styles.authsystem}>
+    <section className={styles.projects}>
       <h1 className={styles.title}>Authentication System</h1>
       <p className={styles.intro}>
         An authentication system built with PHP and MySQL.  
