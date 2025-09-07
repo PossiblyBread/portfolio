@@ -1,6 +1,5 @@
 import Card from "../components/Card/Card.jsx";
 import SkillCard from "../components/Card/SkillCard.jsx";
-import Button from "../components/Button/Button.jsx"
 
 import imageTeto from '../assets/images/pearto.jpg';
 import imageCirno from '../assets/images/cirno.jpg';  
@@ -59,11 +58,12 @@ function Home() {
 						</button>
 					</div>
 					<div className="social-icons">
-						<a href="https://github.com/PossiblyBread" target="_blank" rel="noopener noreferrer">
-						<img src={githubIcon} alt="GitHub" className="icon githubIcon" />
+						<a href="https://github.com/PossiblyBread" target="_blank" rel="noopener noreferrer" className="github" >
+							<img src={githubIcon} alt="GitHub" className="icon githubIcon light" />
+							<img src={githubWhiteIcon} alt="GitHub" className="icon githubIcon dark" />
 						</a>
 						<a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
-						<img src={linkedinIcon} alt="LinkedIn" className="icon linkedinIcon" />
+							<img src={linkedinIcon} alt="LinkedIn" className="icon linkedinIcon" />
 						</a>
 					</div>
 				</div>
@@ -99,7 +99,10 @@ function Home() {
 				<h3>Version Control & Tools</h3>
 				<div className="skills-grid">
 					<SkillCard icon={gitIcon} label="Git" />
-					<SkillCard icon={githubWhiteIcon} label="GitHub" />
+					<div className="githubSkill">
+						<div className="light"><SkillCard icon={githubWhiteIcon} label="GitHub" /></div>
+						<div className="dark"><SkillCard icon={githubIcon} label="GitHub" /></div>
+					</div>
 					<SkillCard icon={vsCodeIcon} label="VS Code" />
 				</div>
 				<h3>Hosting & Cloud</h3>
@@ -139,34 +142,7 @@ function Home() {
 					</form>
 				</div>
 			</div>
-			{/* 
-				<Sidebar>
-					<CardFlip imageFront={imageCirno} frontTitle="Adrian Adona" frontText="Full Stack Developer" imageShapeFront="roundedImage" 
-						imageBack={imageTeto} backTitle="" backText="Wanker" imageShapeBack="roundedImage" />
-					<Card Name="Info" Text="Welcome to my portfolio!" variant="smallCard" />
-					<Linkbar src={githubIcon} label="GitHub" href="https://github.com/PossiblyBread" />
-					<Linkbar src={phoneIcon} label="(+63) 918-402-5526" />
-				</Sidebar>
-				<div className="container">
-				<Carousel
-					slides={[
-					{
-						image: imageCirno,    
-						caption: "Beautiful Landscape",
-						text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-					},
-					{
-						image: imageTeto,    
-						caption: "Mountain View",
-						text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-					},
-					]}
-					variant="profileCard"
-					border
-				/>
-			</div> */}
 		</>
 	);
 }
-
 export default Home;

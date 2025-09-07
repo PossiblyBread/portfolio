@@ -1,19 +1,18 @@
 .toggleButton {
   position: relative;
   overflow: hidden;
-  padding: 6px 14px;   /* smaller padding */
-  font-size: 0.85rem;  /* slightly smaller text */
+  padding: 6px 14px;
+  font-size: 0.85rem; 
   border-radius: 999px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 1px solid color-mix(in oklab, var(--primary-color) 40%, transparent);
+  border: 1px solid color-mix(in oklab, var(--text-color) 16%, transparent);
   background: linear-gradient(145deg, var(--surface-color), var(--background-color));
   color: var(--primary-color);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.08); /* lighter shadow for smaller button */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08); 
   z-index: 0;
 }
-
 .toggleButton::before {
   content: "";
   position: absolute;
@@ -27,25 +26,21 @@
   border-radius: 50%;
   z-index: -1;
 }
-
 .toggleButton:hover::before {
   transform: translate(-50%, -50%) scale(1);
 }
-
 .toggleButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+  box-shadow: var(--shadow-medium);
   border-color: var(--primary-color);
 }
-
 .toggleButton:active {
   transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-soft);
 }
-
 .toggleButton.active {
-  background: linear-gradient(135deg, var(--primary-color), var(--text-color));
-  color: var(--surface-color);
-  border-color: var(--text-color);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  background: linear-gradient(145deg, var(--surface-color), var(--background-color));
+  color: var(--primary-color);
+  border: 1px solid color-mix(in oklab, var(--text-color) 16%, transparent);
+  box-shadow: var(--shadow-soft);
 }
