@@ -18,22 +18,17 @@ function AuthSystem() {
           reverse
         />
         <CardFeature
-          title="Email Verification"
-          description="Gmail-based email verification using PHPMailer to confirm new accounts before activation."
-        />
-        <CardFeature
           title="Login"
           description="User login system with session handling, input validation, and secure password storage in MySQL."
-          reverse
         />
         <CardFeature
           title="One-Time Password (OTP)"
           description="Login with one-time passwords sent via PHPMailer for added security."
+          reverse
         />
         <CardFeature
           title="Forgot Password"
           description="Password recovery flow with secure reset links sent through PHPMailer."
-          reverse
         />
       </div>
     </section>

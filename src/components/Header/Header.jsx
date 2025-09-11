@@ -24,15 +24,17 @@ function Header() {
 
         <ul className={styles.navList}>
           <li><NavLink to="/" className={({ isActive }) => (isActive ? styles.active : undefined)} onClick={() => setMobileOpen(false)}>Home</NavLink></li>
-          <li>
-            <span className={`${styles.dropdownTitle} ${isProjectsActive ? styles.active : ""}`} onClick={toggleProjects}>Projects <span className={`${styles.arrow} ${projectsOpen ? styles.open : ""}`}>▼</span></span>
+          <li  onMouseEnter={() => setProjectsOpen(true)}  onMouseLeave={() => setProjectsOpen(false)} >
+            <span className={`${styles.dropdownTitle} ${isProjectsActive ? styles.active : ""}`}>
+              Projects <span className={`${styles.arrow} ${projectsOpen ? styles.open : ""}`}>▼</span>
+            </span>
             <ul className={`${styles.slide} ${projectsOpen ? styles.open : ""}`}>
-              <li><NavLink to="/projects/AuthSystem" className={({ isActive }) => (isActive ? styles.active : undefined)} onClick={() => setMobileOpen(false)}>Authentication System</NavLink></li>
-              <li><NavLink to="/projects/EmailSender" className={({ isActive }) => (isActive ? styles.active : undefined)} onClick={() => setMobileOpen(false)}>Email Sender</NavLink></li>
-              <li><NavLink to="/projects/IMS" className={({ isActive }) => (isActive ? styles.active : undefined)} onClick={() => setMobileOpen(false)}>Inventory Management System</NavLink></li>
-              <li><NavLink to="/projects/LedgerSystem" className={({ isActive }) => (isActive ? styles.active : undefined)} onClick={() => setMobileOpen(false)}>Ledger System</NavLink></li>
-              <li><NavLink to="/projects/PayrollSystem" className={({ isActive }) => (isActive ? styles.active : undefined)} onClick={() => setMobileOpen(false)}>Payroll System</NavLink></li>
-              <li><NavLink to="/projects/TicketingSystem" className={({ isActive }) => (isActive ? styles.active : undefined)} onClick={() => setMobileOpen(false)}>Ticketing System</NavLink></li>
+              <li><NavLink to="/projects/AuthSystem" onClick={() => setMobileOpen(false)}>Authentication System</NavLink></li>
+              <li><NavLink to="/projects/EmailSender" onClick={() => setMobileOpen(false)}>Email Sender</NavLink></li>
+              <li><NavLink to="/projects/IMS" onClick={() => setMobileOpen(false)}>Inventory Management System</NavLink></li>
+              <li><NavLink to="/projects/LedgerSystem" onClick={() => setMobileOpen(false)}>Ledger System</NavLink></li>
+              <li><NavLink to="/projects/PayrollSystem" onClick={() => setMobileOpen(false)}>Payroll System</NavLink></li>
+              <li><NavLink to="/projects/TicketingSystem" onClick={() => setMobileOpen(false)}>Ticketing System</NavLink></li>
             </ul>
           </li>
         </ul>

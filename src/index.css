@@ -12,21 +12,24 @@
   --shadow-strong: 0 8px 20px rgba(110,168,254, .25);
 }
 .light-mode {
-  --text-color: #243030;             /* Deep charcoal teal */
-  --background-color: #f5fdfb;       /* Very pale mint */
-  --surface-color: #ffffff;          /* Clean white for cards */
-  --primary-color: #2bbbad;          /* Bright teal */
-  --secondary-color: #4db6ac;        /* Muted aqua green */
-  --muted-color: #cfd8dc;            /* Light gray with a blue tint */
-  --success-color: #66bb6a;          /* Fresh leafy green */
-  --highlight-color: #ff7043;        /* Warm coral accent */
-  --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.07);
-  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.12);
-  --shadow-strong: 0 8px 20px rgba(0, 0, 0, 0.18);
+  --text-color: #1f2a38;            
+  --background-color: #f5f8fc;      
+  --surface-color: #ffffff;         
+  --primary-color: #6ea8fe;         
+  --secondary-color: #7a8b95;       
+  --muted-color: #8d8d8d;           
+  --success-color: #8ce99a;         
+  --highlight-color: #ffb74d;       
+  --shadow-soft: 0 2px 6px rgba(110, 168, 254, 0.1);
+  --shadow-medium: 0 4px 12px rgba(110, 168, 254, 0.15);
+  --shadow-strong: 0 8px 20px rgba(110, 168, 254, 0.25);
 }
 html, body { 
-  height: 100%; }
-  * { box-sizing: border-box; }
+  height: 100%; 
+}
+* { 
+  box-sizing: border-box; 
+}
 body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
@@ -144,6 +147,10 @@ small {
   border: none;
   min-width: 150px;
   text-align: center;
+  display: inline-flex;        
+  align-items: center;         
+  justify-content: center;      
+  gap: 0.5rem;       
 }
 .profileButtons button {
   background: color-mix(in oklab, var(--primary-color) 14%, transparent);
@@ -223,28 +230,53 @@ small {
 }
 /* scroll effects */
 .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 .fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 .slide-left, .slide-right {
-    opacity: 0;
-    transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+  opacity: 0;
+  transition: transform 0.5s ease-in, opacity 0.5s ease-in;
 }
 .slide-left {
-    transform: translateX(-100px);
+  transform: translateX(-100px);
 }
 .slide-right {
-    transform: translateX(70px);
+  transform: translateX(70px);
 }
 .slide-left.show, .slide-right.show {
-    opacity: 1;
-    transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
+/* about */
+.about-container h2, .about-action{
+  text-align: center;
+}
+.about-action {
+  margin-top: 2.5rem;
+}
+.resume-button {
+  display: inline-block;
+  background-color: var(--surface-color);
+  border: 1px solid color-mix(in oklab, var(--primary-color) 34%, transparent);
+  color: var(--secondary-color);
+  font-weight: 600;
+  box-shadow: var(--shadow-soft);
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+.resume-button:hover {
+  color: var(--primary-color);
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: var(--shadow-medium);
+}
+
 /* skills */
 .skills-section {
   padding: 3rem 1.5rem;
@@ -321,6 +353,11 @@ small {
   color: var(--text-color);
   min-width: 250px;
   max-width: 700px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.contact-form:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-strong);
 }
 .form-container h2 {
   text-align: center;

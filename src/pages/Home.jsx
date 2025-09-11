@@ -18,10 +18,10 @@ import viteIcon from '../assets/icons/vite.svg';
 import cloudflareIcon from '../assets/icons/cloudflare.svg';
 import hostingerIcon from '../assets/icons/hostinger.svg';
 
-
 import githubWhiteIcon from '../assets/icons/github-white.svg';
 import githubIcon from '../assets/icons/github.svg';
 import linkedinIcon from '../assets/icons/linkedin.svg';
+import resumeFile from "../assets/Resume.pdf";
 
 import useScrollAnimations from "../util/script.js";
 
@@ -51,7 +51,7 @@ function Home() {
 				<div className="profileButtons">
 					<div className="buttonRow">
 						<button className="customButton" onClick={(e) => clickToView(e, "#contact-form")}>
-							Connect with me
+							Get in Touch
 						</button>
 						<button className="getStartedLink" onClick={(e) => clickToView(e, "#about")}>
 							Get Started
@@ -68,14 +68,17 @@ function Home() {
 					</div>
 				</div>
 			</div>
-			<div className="fade-in glassy-fx" id="about">
-				<div className="centered">
-					<div className="">
+			<div className="centered fade-in" id="about">
+				<div className="about-container">
+					<div className="about-text">
 						<h2>About Me</h2>
 						<p>
 							I’m a full stack developer who enjoys creating applications that are simple, reliable, and easy to use.  
 							I like working across the stack and exploring new tools that make building and maintaining projects more efficient.  
 						</p>
+					</div>
+					<div className="about-action">
+						{/* <a href={resumeFile} download className="resume-button"> Download Resume </a> */}
 					</div>
 				</div>
 			</div>

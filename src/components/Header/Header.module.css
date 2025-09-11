@@ -63,7 +63,7 @@
   width: 0%;
   height: 2px;
   background: linear-gradient(90deg, var(--primary-color), var(--highlight-color));
-  transition: width 0.25s cubic-bezier(.2,.8,.2,1), background 0.2s ease;
+  transition: width 0.75s cubic-bezier(.2,.8,.2,1), background 0.2s ease;
 }
 .navList a:hover::after,
 .dropdownTitle:hover::after,
@@ -88,17 +88,17 @@
   min-width: 220px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  border: 1px solid color-mix(in oklab, var(--text-color) 8%, transparent);
+  border-bottom: 3px solid color-mix(in oklab, var(--text-color) 8%, transparent);
   backdrop-filter: blur(10px) !important; 
-  box-shadow: var(--shadow-soft);
   padding: 6px 6px;
   list-style: none;
-  margin: 16px 0 0 0;
+  padding-top: 20px;
+  margin: -20px 0 0 0;
   opacity: 0;
   transform: translateY(-6px);
   pointer-events: none;
   transition: opacity 0.22s ease, transform 0.22s ease;
-  z-index: 2000;
+  z-index: -1;
 }
 .slide.open {
   opacity: 1;
