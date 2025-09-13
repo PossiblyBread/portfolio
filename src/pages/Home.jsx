@@ -62,7 +62,7 @@ function Home() {
 							<img src={githubIcon} alt="GitHub" className="icon githubIcon light" />
 							<img src={githubWhiteIcon} alt="GitHub" className="icon githubIcon dark" />
 						</a>
-						<a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+						<a href="https://linkedin.com/in/adrian-adona" target="_blank" rel="noopener noreferrer">
 							<img src={linkedinIcon} alt="LinkedIn" className="icon linkedinIcon" />
 						</a>
 					</div>
@@ -78,7 +78,7 @@ function Home() {
 						</p>
 					</div>
 					<div className="about-action">
-						{/* <a href={resumeFile} download className="resume-button"> Download Resume </a> */}
+						<a href={resumeFile} download className="resume-button"> Download Resume </a>
 					</div>
 				</div>
 			</div>

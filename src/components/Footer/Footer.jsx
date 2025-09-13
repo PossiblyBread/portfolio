@@ -1,4 +1,6 @@
 import styles from "./Footer.module.css";
+import CallingCard from "../Card/CallingCard.jsx";
+import imageCirno from '../../assets/images/cirno.jpg';  
 
 function Footer() {
   const clickToView = (e, targetId) => {
@@ -25,16 +27,18 @@ function Footer() {
             <li><a href="#contact-form" onClick={(e) => clickToView(e, "#contact-form")}>Contact</a></li>
           </ul>
         </div>
-
         <div className={styles.contact}>
-          <h2>Contact</h2>
-          <p>Email: link.adrianadona@gmail.com</p>
-          <p>Phone: (+63) 918 402 5526</p>
-          <p> <a href="https://github.com/PossiblyBread" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
-          <p><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"> GitHub</a></p>
+          <CallingCard
+            name="Adrian Adona"
+            role="Junior Full Stack Developer"
+            email="link.adrianadona@gmail.com"
+            phone="+63 918-402-5526"
+            github="https://github.com/PossiblyBread"
+            linkedin="https://linkedin.com/in/adrian-adona"
+            logo={imageCirno} 
+          />
         </div>
       </div>
-
       <div className={styles.bottom}>
         <p>&copy; {new Date().getFullYear()} Adrian Adona. All rights reserved.</p>
       </div>

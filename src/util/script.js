@@ -16,7 +16,7 @@ export default function useScrollAnimations() {
     }
 
     window.addEventListener("scroll", checkScroll); 
-    checkScroll(); // run once at mount
+    checkScroll()
 
     return () => window.removeEventListener("scroll", checkScroll);
   }, []);
