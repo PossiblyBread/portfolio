@@ -3,7 +3,6 @@
   position: absolute;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
   gap: 1rem;
   position: sticky;
   top: 0;
@@ -12,7 +11,9 @@
 }
 .navWrapper {
   display: flex;
-  flex: 1;           
+  padding: 1rem 1.5rem;
+  flex: 1;          
+  backdrop-filter: blur(10px);  
 }
 .navList {
   display: flex;
@@ -148,9 +149,11 @@
   gap: 4px;
   background: transparent;
   border: none;
+  border-radius: 10px;
   cursor: pointer;
-  padding: 6px;
   order: 2;
+  padding: 1rem 1.5rem;
+  backdrop-filter: blur(10px);  
 }
 .hamburger span {
   display: block;

@@ -112,7 +112,6 @@ small {
 }
 .glassy-fx {
   backdrop-filter: blur(10px); 
-  transition: all 0.3s ease-in-out; 
 }
 .hero {
   min-height: 90vh;
