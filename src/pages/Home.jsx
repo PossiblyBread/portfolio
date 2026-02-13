@@ -77,9 +77,9 @@ function Home() {
 							I like working across the stack and exploring new tools that make building and maintaining projects more efficient.  
 						</p>
 					</div>
-					<div className="about-action">
-						<a href={resumeFile} download className="resume-button"> Download Resume </a>
-					</div>
+					{/* <div className="about-action">
+						<a href={resumeFile} download className="resume-button" > Download Resume </a>
+					</div> */}
 				</div>
 			</div>
 			 <div className="skills-section centered fade-in" id="skills">
