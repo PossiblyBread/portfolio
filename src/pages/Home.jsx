@@ -21,7 +21,7 @@ import hostingerIcon from '../assets/icons/hostinger.svg';
 import githubWhiteIcon from '../assets/icons/github-white.svg';
 import githubIcon from '../assets/icons/github.svg';
 import linkedinIcon from '../assets/icons/linkedin.svg';
-import resumeFile from "../assets/Resume.pdf";
+//import resumeFile from "../assets/Resume.pdf";
 
 import useScrollAnimations from "../util/script.js";
 
